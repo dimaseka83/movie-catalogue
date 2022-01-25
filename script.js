@@ -1,9 +1,15 @@
-const mail = {
-    from : "pengirim@dicoding.com",
-    sendMessage: function (msg, to) {
+class Mail {
+    constructor() {
+        this.from = 'pengirim@dicoding';
+        this.contacts = [];
+        this.yourOtherProperty = 'the values';
+    }
+
+    sendMessage(msg, to){
         console.log(`you send: ${msg} to ${to} from ${this.from}`);
+        this.contacts.push(to);
     }
 }
 
-console.log(mail.from);
-mail.sendMessage('apa kabar', 'penerima@dicoding.com')
+const mail = new Mail();
+mail.sendMessage('Hallo', 'dimaseka83@gmail.com');
