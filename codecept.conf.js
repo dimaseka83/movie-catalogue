@@ -4,6 +4,8 @@ const { setHeadlessWhen } = require('@codeceptjs/configure');
 // HEADLESS=true npx codecept run
 setHeadlessWhen(process.env.HEADLESS);
 
+// enable all common plugins https://github.com/codeceptjs/configure#setcommonplugins
+
 exports.config = {
   tests: 'e2e/**/*.spec.js',
   output: 'e2e/outputs',
@@ -19,7 +21,7 @@ exports.config = {
   },
   bootstrap: null,
   mocha: {},
-  name: 'movie-catalogue',
+  name: 'movie-catalogue-lite',
   plugins: {
     retryFailedStep: {
       enabled: true,
