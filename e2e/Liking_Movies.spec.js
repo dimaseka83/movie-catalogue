@@ -16,3 +16,10 @@ Scenario('liking one movie', (I) => {
   I.amOnPage('/');
   // … kita akan mengisi uji coba berikutnya …
 });
+
+Scenario('liking one movie', (I) => {
+  I.see('Tidak ada film untuk ditampilkan', '.movie-item__not__found');
+
+  I.amOnPage('/');
+  pause();
+});
