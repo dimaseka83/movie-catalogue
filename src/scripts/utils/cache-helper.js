@@ -1,4 +1,3 @@
-import { async } from 'regenerator-runtime';
 import CONFIG from '../globals/config';
 
 const CacheHelper = {
@@ -21,7 +20,6 @@ const CacheHelper = {
       this._fetchRequest(request);
       return response;
     }
-
     return this._fetchRequest(request);
   },
 
@@ -44,7 +42,6 @@ const CacheHelper = {
     const cache = await this._openCache();
     cache.add(request);
   },
-
 };
 
 export default CacheHelper;

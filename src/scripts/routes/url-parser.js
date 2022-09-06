@@ -20,9 +20,8 @@ const UrlParser = {
   },
 
   _urlCombiner(splitedUrl) {
-    console.log(splitedUrl)
     return (splitedUrl.resource ? `/${splitedUrl.resource}` : '/')
-      + (splitedUrl.id ? `/:id` : '')
+      + (splitedUrl.id ? '/:id' : '')
       + (splitedUrl.verb ? `/${splitedUrl.verb}` : '');
   },
 };
